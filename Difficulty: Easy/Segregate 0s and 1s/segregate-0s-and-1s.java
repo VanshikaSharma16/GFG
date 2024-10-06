@@ -46,24 +46,22 @@ public class Main {
 class Solution {
     void segregate0and1(int[] arr) {
         // code here
-        int start = 0;
-        int end = arr.length - 1;
-        while (start < end){
-            if (arr[start] == 0){
-                start++;
+        int n = arr.length;
+        int cnt1 = 0, cnt2 = 0;
+        for (int i = 0; i < n; i++){
+            if (arr[i] == 0){
+                cnt1++;
             }
             else {
-                if (arr[end] == 0){
-                    int temp = arr[start];
-                    arr[start] = arr[end];
-                    arr[end] = temp;
-                    start++;
-                    end--;
-                }
-                else{
-                    end--;
-                }
+                cnt2++;
             }
         }
+        for (int i = 0; i < cnt1; i++){
+            arr[i] = 0;
+        }
+        for (int i = cnt1; i < n; i++){
+            arr[i] = 1;
+        }
+        // return a2;
     }
 }
