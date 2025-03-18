@@ -46,26 +46,13 @@ class Main {
 class Solution {
     public static int findUnion(int a[], int b[]) {
         // code here
-        int count = 0;
-        int a1 = a.length;
-        int b1 = b.length;
-      
-        int c1 = a1 + b1;
-        int[] c = new int[c1];
-
-        System.arraycopy(a, 0, c, 0, a1);
-        System.arraycopy(b, 0, c, a1, b1);
-        
-        
-        Arrays.sort(c);
-        for (int i = 0; i <= c1 - 2; i++) {
-            if (c[i] != c[i + 1]){
-                count++;
-            }
-            else {
-                continue;
-            }
+        HashSet<Integer> hs = new HashSet<>();
+        for (int i = 0; i < a.length; i++) {
+            hs.add(a[i]);
         }
-        return count+1;
+        for (int i = 0; i < b.length; i++) {
+            hs.add(b[i]);
+        }
+        return hs.size();
     }
 }
