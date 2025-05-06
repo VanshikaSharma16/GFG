@@ -36,23 +36,23 @@ class Main {
 class Solution {
     static ArrayList<Integer> subarraySum(int[] arr, int target) {
         // code here
-        ArrayList<Integer> a = new ArrayList<>();
-        for (int i = 0; i < arr.length; i++) {
-            int sum = 0;
-            for (int j = i; j < arr.length; j++) {
-                sum += arr[j];
-                if (sum == target) {
-                    a.add(i+1);
-                    a.add(j+1);
-                    return a;
-                } else if (sum > target) {
-                    break;
-                }
+        int start = 0, end = 0, sum = 0;
+        ArrayList<Integer> result = new ArrayList<>();
+        
+        while (end < arr.length) {
+            sum += arr[end];
+            while (sum > target && start < end) {
+                sum -= arr[start];
+                start++;
             }
+            if (sum == target){
+                result.add(start + 1);
+                result.add(end + 1);
+                return result;
+            }
+            end++;
         }
-        if (a.size() == 0) {
-            a.add(-1);
-        }
-        return a;
+        result.add(-1);
+        return result;
     }
 }
