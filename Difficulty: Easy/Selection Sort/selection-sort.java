@@ -48,30 +48,23 @@ class GFG {
 
 
 class Solution {
-        
-    int findMin(int arr[], int n, int idx)
-    {
-        int minValue = arr[idx];
-        int minIndex = idx;
-        for (int i = idx + 1; i < n; i++)
-        {
-            if (minValue > arr[i])
-            {
-                minValue = arr[i];
-                minIndex = i;
-            }
-        }
-        return (minIndex);
-    }
-    
     void selectionSort(int[] arr) {
         // code here
-        int ln = arr.length;
-        for (int i = 0; i < ln - 1; i++) {
-            int min = findMin(arr, ln, i);
-            int temp = arr[i];
-            arr[i] = arr[min];
-            arr[min] = temp;
+        int size = arr.length;
+        for (int i = 0; i < size; i++) {
+            int min = i;
+            for (int j = i; j < size; j++) {
+                if (arr[j] < arr[min]) {
+                    min = j;
+                }
+            }
+            swapFunction (arr, min, i);
         }
+    }
+    void swapFunction (int[] arr, int min, int j) {
+        int temp;
+        temp = arr[min];
+        arr[min] = arr[j];
+        arr[j] = temp;
     }
 }
