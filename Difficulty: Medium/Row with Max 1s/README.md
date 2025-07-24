@@ -1,0 +1,10 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/row-with-max-1s--162208/1?page=1&difficulty=Medium&sortBy=latest">Row with Max 1s</a></h2><h3>Difficulty Level : Difficulty: Medium</h3><hr><div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">Given a 2D&nbsp;</span><span style="font-size: 18px;">binary matrix</span><strong style="font-size: 18px;">&nbsp;mat[][] </strong><span style="font-size: 18px;"><span style="font-size: 18px;">of size n x m,&nbsp;where each row contains only 0s and 1s, and each row is sorted in </span><strong style="font-size: 18px;">non-decreasing</strong><span style="font-size: 18px;"> order (all the 0s come before any 1s).</span><br><span style="font-size: 18px;">Find the <strong>index </strong>of the <strong>row </strong>that contains the highest number of <strong>1s</strong>.</span></span></p>
+<p><strong style="font-size: 18px;">Note:&nbsp;</strong><span style="font-size: 18px;">If multiple rows have the same maximum count of 1s, return the row with the smallest index.</span></p>
+<p><strong><span style="font-size: 18px;">Examples :</span></strong></p>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>mat[][] = [[0, 0, 1, 1],<br>                [0, 1, 1, 1],<br>                [0, 0, 0, 1]]
+<strong>Output: </strong>1
+<strong>Explanation: </strong>Row at index 1 has three 1s, which is the highest among all rows.</span></pre>
+<pre><span style="font-size: 18px;"><strong>Input: </strong>mat[][] = [[1, 1, 1],<br>                [0, 1, 1],<br>                [1, 1, 1]]
+<strong>Output: </strong>0
+<strong>Explanation: </strong>The first row (index 0) and the last row (index 2) both contain three 1s, which is the maximum among all rows. Since we return the smallest index in case of a tie, the answer is 0.</span></pre>
+<p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ n, m ≤ 1000<br></span><span style="font-size: 18px;">0 ≤ mat[i][j] ≤ 1</span></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Binary Search</code>&nbsp;<code>two-pointer-algorithm</code>&nbsp;<code>Matrix</code>&nbsp;<code>Algorithms</code>&nbsp;
